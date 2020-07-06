@@ -83,7 +83,11 @@ class Calculator {
       this.currentOperand
     );
     if (this.operation != null) {
-      this.previousOperandTextElement.innerText = ` ${this.previousOperand}  ${this.operation} `;
+      this.previousOperandTextElement.innerText = `${this.getDisplayNumber(
+        this.previousOperand
+      )} ${this.operation}`;
+    } else {
+      this.previousOperandTextElement.innerText = "";
     }
   }
 }
